@@ -68,6 +68,6 @@ describe('Testing UI features', function(){
         cy.get('#clear').click()
         cy.get('#see-history').click()
         cy.get('#delete-history').click()
-        cy.get('#history').should('not.have.text', '8-3=5')
+        cy.contains('8-3=5').should('not.exist')
 })
 })

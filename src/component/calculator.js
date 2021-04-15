@@ -39,14 +39,14 @@ class Calculator extends React.Component{
     printsHistory = ()=>{
          this.setState({...this.state.isClicked=true})
     }
+    deleteHistory =() => {
+        this.setState({...this.state.history =[]})
+    }
  render(){
      return(
          <div>
              <h1>Calculator</h1>
              <div>
-                 {/* <p>{this.state.history}</p> */}
-               {/* <p>{this.state.history}</p>
-               <p>{this.state.operations}</p> */}
                  <div className='calculator-buttons'>
                  <span><button id='clear' onClick={this.handleClear}>clear</button><p id='result'>{this.state.result}</p></span>
                  <span><button id='number-one' value='1' onClick={this.handleClick}>1</button><button id='number-two' value='2'onClick={this.handleClick} >2</button><button id='number-three' value='3'onClick={this.handleClick}>3</button></span><br/>
@@ -54,7 +54,7 @@ class Calculator extends React.Component{
                  <span><button id='number-seven' value='7' onClick={this.handleClick}>7</button><button id='number-eight' value='8' onClick={this.handleClick}>8</button><button id='number-nine' value='9' onClick={this.handleClick}>9</button></span><br/>
                  <span><button id='number-zero' value='0' onClick={this.handleClick}>0</button><button id='multiply-button' value='*' onClick={this.handleClick}>*</button><button id='divide-button' value='/' onClick={this.handleClick}>/</button></span><br/>
                  <span><button id='add-button' value='+' onClick={this.handleClick}>+</button><button id='subtract-button' value='-' onClick={this.handleClick}>-</button><button id='equals-button' value='='onClick={this.calculate}>=</button></span><br/>
-                 <span><button id='see-history' onClick={this.printsHistory}>See history</button><button id='delete-history'>Delete history</button></span>
+                 <span><button id='see-history' onClick={this.printsHistory}>See history</button><button id='delete-history' onClick={this.deleteHistory}>Delete history</button></span>
              </div>
              <p>
                 {this.state.isClicked&&this.state.history.map(element=>{
