@@ -15,7 +15,8 @@ class Calculator extends React.Component{
     }
     handleClick = (e)=>{
         this.setState ({...this.state.operations.push(e.target.value)})
-        this.setState({...this.state.result=e.target.value}) 
+        this.setState({...this.state.result=''})
+        this.setState({...this.state.result+=this.state.operations.join('')})
 
     }
    calculate =()=>{
