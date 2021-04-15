@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import Heading from './heading.js'
+import Image from './image.js'
 
 class Calculator extends React.Component{
     constructor(props){
@@ -45,7 +47,7 @@ class Calculator extends React.Component{
  render(){
      return(
          <div>
-             <h1>Calculator</h1>
+            <Heading />
              <div id='calculator'>
                  <div id='calculator-buttons'>
                  <span><p id='result'>{this.state.result}</p></span>
@@ -65,8 +67,7 @@ class Calculator extends React.Component{
             })}
              </p>
              </div>
-           
-             <img   alt='image' src='https://targetcareers.co.uk/sites/targetcareers.co.uk/files/public/styles/header_1500x550/public/field/image/dsg-maths.jpg?itok=CEAJen3D'/>
+             <Image />
              </div>
          </div>
      )
