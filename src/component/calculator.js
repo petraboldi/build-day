@@ -7,7 +7,7 @@ class Calculator extends React.Component{
              <h1>Calculator</h1>
              <div>
                  <div className='calculator-buttons'>
-                 <p id='result'>The result is...</p>
+                 <span><button id='clear'>clear</button><p id='result'>The result is...</p></span>
                  <span><button id='number-one'>1</button><button id='number-two'>2</button><button id='number-three'>3</button></span><br/>
                  <span><button id='number-four'>4</button><button id='number-five'>5</button><button id='number-six'>6</button></span><br/>
                  <span><button id='number-seven'>7</button><button id='number-eight'>8</button><button id='number-nine'>9</button></span><br/>

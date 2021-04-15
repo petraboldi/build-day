@@ -22,5 +22,5 @@ let result = render(<Calculator />);
 test('Renders  all buttons on the page', async() => {
   render(<Calculator />);
   const linkElement =  await screen.findAllByRole('button');
-  expect(linkElement).toHaveLength(13);
+  expect(linkElement).toHaveLength(14);
 })

@@ -15,4 +15,26 @@ describe('Testing the first UI features', function(){
      it(" '+'button is visible", function(){
         cy.get('#add-button').should('be.visible')
 })
+     it("user adds up two numbers", function(){
+        cy.get('#number-two').click()
+        cy.get('#add-button').click()
+        cy.get('#number-two').click()
+        cy.get('#equals-button').click()
+        cy.get('p').should('have.text', '4')
+})
+     it("user does subtracting", function(){
+        cy.get('#number-eight').click()
+        cy.get('#subtract-button').click()
+        cy.get('#number-three').click()
+        cy.get('#equals-button').click()
+        cy.get('p').should('have.text', '5')
+})
+     it("user clears result from the page", function(){
+        cy.get('#number-eight').click()
+        cy.get('#subtract-button').click()
+        cy.get('#number-three').click()
+        cy.get('#equals-button').click()
+        cy.get('#clear').click()
+        cy.get('p').should('not.have.text', '5')
+})
 })
