@@ -1,4 +1,4 @@
-describe('Testing the first UI features', function(){
+describe('Testing UI features', function(){
     beforeEach(()=>{
         cy.visit('/')
     })
@@ -28,6 +28,20 @@ describe('Testing the first UI features', function(){
         cy.get('#number-three').click()
         cy.get('#equals-button').click()
         cy.get('p').should('have.text', '5')
+})
+     it("user can multiply numbers", function(){
+        cy.get('#number-five').click()
+        cy.get('#multiply-button').click()
+        cy.get('#number-eight').click()
+        cy.get('#equals-button').click()
+        cy.get('p').should('have.text', '40')
+})
+     it("user can do division", function(){
+        cy.get('#number-nine').click()
+        cy.get('#divide-button').click()
+        cy.get('#number-three').click()
+        cy.get('#equals-button').click()
+        cy.get('p').should('have.text', '3')
 })
      it("user clears result from the page", function(){
         cy.get('#number-eight').click()
